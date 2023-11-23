@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+         <style>
+    h1 {
+
+    background-color: #333;
+    color: white;
+     padding: 10px;
+    }
+
+    h1 {
+  color: whitesmoke; 
+    }
+ 
+    h1 {
+        font-family: Georgia, sans-serif; 
+    }
+    body { 
+        font-family: Arial, sans-serif;
+     }
+
+    .boton { 
+        background-color: #f8f9fa; border: 1px solid #ced4da;
+         padding: 20px; border-radius: 4px;
+         width: 300px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+         transition: transform 0.3s ease-in-out; 
+         margin-bottom: 20px; 
+        }
+    
+    .boton:hover { 
+        transform: translateX(10px); 
+    }
+    
+    .titulo { 
+        font-size: 24px; 
+        font-weight: bold; 
+        margin-bottom: 10px;
+     }
+    
+    .popup {
+         display: none; 
+         position: fixed; 
+         top: 0; left: 0; right: 0;
+         bottom: 0; 
+         background-color: rgba(0, 0, 0, 0.5);
+          justify-content: center; 
+          align-items: center; 
+        }
+    
+    .popup img {
+         max-width: 100%; 
+         max-height: 100%; 
+         } 
+         </style>
+    
+    </head> 
+    <body> 
+        <center><h1>Los mejores goles </h1></center>
+        <ul>
+            <li><button onclick="location.href='index.html'" class="boton">volver al menu</button></li>
+        </ul>
+     <ul> 
+    <li><button class="boton" onclick="mostrarImagen('https://i.pinimg.com/originals/cf/b2/10/cfb2104081dfc5b73a19c7d3b0467bb9.gif')"> 
+    <div class="titulo">Chilenas</div> 
+    <p>Zlatan Ibrahimović</p> 
+    </button> </li>
+
+    <li><button class="boton" onclick="mostrarImagen('https://j.gifs.com/zvN18O.gif')"> 
+    <div class="titulo">Jugadas</div> 
+    <p>FC Barcelona</p> 
+    </button> </li>
+
+    <li><button class="boton" onclick="mostrarImagen('https://i.pinimg.com/originals/47/39/68/47396889ecf45a9227cd391376c30648.gif')"> 
+        <div class="titulo">Lejanos</div> 
+        <p>Lionel Messi </p>
+     </button> </li>
+
+     <li><button class="boton" onclick="mostrarImagen('https://i.gifer.com/origin/ea/ea608bba5cc5be8e2b2b138bed762eb3_w200.webp')"> 
+        <div class="titulo">Cecanos</div>
+         <p>Lionel Messi</p> 
+        </button></li>
+    </ul>   
+        <div class="popup" id="popup"> 
+        <img src="" alt="Imagen" id="imagenPopup"> 
+    </div> 
+
+    <script> let botones = document.querySelectorAll('.boton'); 
+     let popup = document.getElementById('popup');
+     let imagenPopup = document.getElementById('imagenPopup');
+     function mostrarImagen(rutaImagen) { imagenPopup.src = rutaImagen; 
+     popup.style.display = 'flex'; } popup.addEventListener('click', () => { popup.style.display = 'none'; }); </script> </body> 
+    </html>
